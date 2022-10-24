@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        Gabriel Fuller's Groovy Frog | ITIS 3135 | Calculator
+    </title>
+    <meta name="keywords" content="Calculator" >
+	<link href="styles/default.css" rel="stylesheet" type="text/css" >
+    <script src="scripts/calculator_try.js"></script>  
+</head>
+
+    <body>
+        <div data-include="components/header.html"></div>
+        <main>
+
+            <form name="frmCalc" id="frmCalc">
+                <p>Please enter a number</p>
+                
+                <input type="text" name="txtNumber" value="" size="11"/><br/>
+                
+                <input type="button" value="1" name="button1" id="button1"/>
+                <input type="button" value="2" name="button2" id="button2"/>
+                <input type="button" value="3" name="button3" id="button3"/>
+                <input type="button" value="+" name="buttonAdd" id="buttonAdd"/><br/>
+                
+                <input type="button" value="4" name="button4" id="button4"/>
+                <input type="button" value="5" name="button5" id="button5"/>
+                <input type="button" value="6" name="button6" id="button6"/>
+                <input type="button" value="-" name="buttonSubtract" id="buttonSubtract" style="padding-right:10px"/><br/>
+                
+                <input type="button" value="7" name="button7" id="button7"/>
+                <input type="button" value="8" name="button8" id="button8"/>
+                <input type="button" value="9" name="button9" id="button9"/>
+                <input type="button" value="*" name="buttonMultiply" id="buttonMultiply" style="padding-right:10px"/><br/>
+                
+                <input type="button" value="." name="buttonDecimal" id="buttonDecimal" style="padding-right:10px"/>
+                <input type="button" value="0" name="button0" id="button0"/>
+                <input type="button" value="^2" name="buttonSqured" id="buttonSquared" style="padding-right:0.5px"/>
+                <input type="button" value="/" name="buttonDivide" id="buttonDivide"style="padding-right:10px"/><br/>
+        
+                <input type="reset" name="buttonClear" id="buttonClear" value="Clear" style="padding-left:68px"/> <br/>
+
+                <input type="button" name="buttonCalculate" id="buttonCalculate" value="Calculate" style="padding-left:45px"/>
+            </form>
+
+        </main>
+        <footer>
+            <div data-include="components/footer.html"></div>
+        </footer>
+        <script src="scripts/HTMLInclude.js"></script>
+        <script src="scripts/calculator_try.js"></script>
+    </body>
+</html>
