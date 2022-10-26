@@ -1,133 +1,129 @@
-<html>
-<head>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript">
-function scrollto(div)
-{
- $('html,body').animate(
- {
-  scrollTop: $("#"+div).offset().top
- },'slow');
-}
-</script>
+<!DOCTYPE html>
+<html lang ={'en'}>
+    <head>
+        <title>
+            Gabriel Fuller's Groovy Frog | ITIS 3135 | Introduction
+        </title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+            <SCRIPT>
+                function ShowRadioButtonDiv (IdBaseName, NumberOfButtons) {
+                    for (x=1;x<=NumberOfButtons;x++) {
+                        CheckThisButton = IdBaseName + x;
+                        ThisDiv = IdBaseName + x +'Div';
+                    if (document.getElementById(CheckThisButton).checked) {
+                        document.getElementById(ThisDiv).style.display = "block";
+                        }
+                    else {
+                        document.getElementById(ThisDiv).style.display = "none";
+                        }
+                    }
+                    return false;
+                }
+            </SCRIPT>
+    </head>
+    <body>
+        <header>
+            <h1> 
+                Gabriel Fuller's Groovy Frog | ITIS 3135
+            </h1>
+            <nav>
+            <ul>
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135">Home</a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/introduction.html">Introduction</a>
+                ||
+                <a href= "https://webpages.charlotte.edu/gfuller3/itis3135"> UNCC Home </a>
+                ||
+                <a href= "https://webpages.charlotte.edu/gfuller3/itis3135/tables.html"> Activety 2 - HTML Tables </a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/forms.html"> Activety 3 - Forms </a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/stuff.html"> cRaPpY WeBsItE</a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/website_evaluations.html"> CRAP</a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/polygons.html"> Polygon</a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/calculator_try.html"> Calculator</a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/contract.html"> Contract</a>
+                ||
+                <a href="https://webpages.charlotte.edu/gfuller3/itis3135/midterm/index.html"> Midterm</a>
+            </ul>
+            </nav>
+        </header>
+        <main>
 
-<style> 
-    body
-    {
-    margin:0px auto;
-    padding:0px;
-    text-align:center;
-    width:100%;
-    font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
-    background-color:#A9D0F5;
-    }
-    #header
-    {
-    width:100%;
-    margin:0px auto;
-    padding:0px;
-    text-align:center;
-    height:70px;
-    line-height:70px;
-    }
-    #header li
-    {
-    display:inline-block;
-    margin-right:25px;
-    font-size:17px;
-    color:#084B8A;
-    font-weight:bold;
-    cursor:pointer;
-    }
-    #header #site_name
-    {
-    text-align:left;
-    width:680px;
-    font-size:35px;
-    margin-left:20px;
-    }
-    #home,#about,#contact
-    {
-    margin-top:100px;
-    width:90%;
-    height:400px;
-    margin-left:5%;
-    padding:50px;
-    box-sizing:border-box;
-    background-color:#084B8A;
-    border-radius:10px;
-    color:white;
-    }
-    #home h1
-    {
-    font-size:40px;
-    }
-    #home p
-    {
-    font-size:20px;
-    }
-    #about p
-    {
-    font-size:20px;
-    }
-    #contact input[type="text"]
-    {
-    width:250px;
-    height:35px;
-    padding-left:10px;
-    float:left;
-    margin-left:80px;
-    border:none;
-    }
-    #contact textarea
-    {
-    float:left;
-    width:250px;
-    height:35px;
-    margin-left:20px;
-    border:none;
-    padding-left:10px;
-    padding-top:10px;
-    }
-    #contact input[type="submit"]
-    {
-    float:left;
-    margin-left:20px;
-    height:35px;
-    width:100px;
-    background:none;
-    color:white;
-    border:1px solid white;
-    }
-</style>
-</head>
-<body>
+            <FORM STYLE="padding-left:5px">
+            <INPUT TYPE="radio" NAME="RadioGroupName" ID="GroupName1" ONCLICK="ShowRadioButtonDiv('GroupName', 6)"/>Who<BR>
+            <INPUT TYPE="radio" NAME="RadioGroupName" ID="GroupName2" ONCLICK="ShowRadioButtonDiv('GroupName', 6)"/>What<BR>
+            <INPUT TYPE="radio" NAME="RadioGroupName" ID="GroupName3" ONCLICK="ShowRadioButtonDiv('GroupName', 6)"/>When<BR>
+            <INPUT TYPE="radio" NAME="RadioGroupName" ID="GroupName4" ONCLICK="ShowRadioButtonDiv('GroupName', 6)"/>Where<BR>
+            <INPUT TYPE="radio" NAME="RadioGroupName" ID="GroupName5" ONCLICK="ShowRadioButtonDiv('GroupName', 6)"/>Why<BR>
+            <INPUT TYPE="radio" NAME="RadioGroupName" ID="GroupName6" ONCLICK="ShowRadioButtonDiv('GroupName', 6)"/>How<BR>
+            </FORM>
 
-<div id="header">
- <li id="site_name">TalkersCode.com</li>
- <li onclick="scrollto('home');">HOME</li>
- <li onclick="scrollto('about');">ABOUT</li>
- <li onclick="scrollto('contact');">CONTACT</li>
-</div>
 
-<div id="home">
- <h1>Demo Of One Page Website Template Using HTML, CSS And jQuery<p>TalkersCode.com</p></h1>
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-</div>
+            <DIV ID="GroupName1Div" STYLE="display:none;">
+                <section>
+                    <h2>Who</h2>
+                    <p>My name is Gabriel Fuller, and my hobby is gaming. Recently, I have been playing Hunt Showdown (covered in later section). With a few of my friends. Online, I am known as Rockst1r or Nerdymob. 
+                    </p>
+                </section>
+            </DIV>
 
-<div id="about">
- <p>In this tutorial we will show you how to create One Page Website Template Using HTML, CSS And jQuery.Now you can build simple and beautiful website quickly.</p>
- <p>TalkersCode.com is a complete destination to learn Web Development with Best, Fast and Easy Methods for those who is a novice and wants to be the Xpert in Web Development.</p>
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-</div>
+            <DIV ID="GroupName2Div" STYLE="display:none;">
+                <section>
+                    <h2>What</h2>
+                    <p>Recently I have been playing Hunt Showdown, "a high-stakes, tactical PvPvE first-person shooter" - Steam
+                    </p>
+                    <p>
+                        This game is best described by me as a western-style zombie game where you're primary goal is to escape with your life and hopefully a reward or two. 
+                    </p>
+                </section>
+            </DIV>
 
-<div id="contact">
-<h1>If you have any question or query you can contact us at <br>talkerscode@gmail.com <br><br>or you can fill the form below</h1>
-<input type="text" placeholder="Name">
-<textarea placeholder="Message"></textarea>
-<input type="submit" value="SEND">
-</div>
+            <DIV ID="GroupName3Div" STYLE="display:none;">
+                <section>
+                    <h2>When</h2>
+                    <p>Hunt Showdown initially released February 22, 2018. Even with the game being out for 4 years, I have only been playing for roughly 1 year.</p>
+                </section>
+            </DIV>
 
-</body>
+            <DIV ID="GroupName4Div" STYLE="display:none;">
+                <section>
+                    <h2>Where</h2>
+                    <p>I currently game in the dorms at UNCC on Xbox. This tends to lead to interesting situations such as the fire alarm going off during a match. </p>
+                </section>
+            </DIV>
+
+            <DIV ID="GroupName5Div" STYLE="display:none;">
+                <section>
+                    <h2>Why</h2>
+                    <p>Hunt showdown is a difficult game that takes a lot of time and practice. Why play a difficult game? I find it to be very rewarding for many reasons: </p>
+                    <ol>
+                        <li> High skill cap. </li>
+                        <li> Smaller community. This leads to each player taking the game seriously and an all around enjoyable experience. </li>
+                        <li> Intense gameplay; from great aim to panicking, this is one of few games that can get my heart pumping. </li>
+                </section>
+            </DIV>
+
+            <DIV ID="GroupName6Div" STYLE="display:none;">
+                <section>
+                    <h2>How to improve</h2>
+                    <p>To improve in most things it takes patience, practice, and understanding. In videogames, you have to be consistant in how you play and when due to the variablity in different playstyles. If you can learn about the game in any form, you get a greater understanding of how the game functions and how to react in certain situations. </p>
+                </section>
+            </DIV>
+
+
+        </main>
+        <footer>
+            <a href = "https://webpages.charlotte.edu/gfuller3/itis3135/" >UNCC Homepage</li>
+            || <a href="https://github.com/nerdymob/nerdymob.github.io">github repo </li>
+            || <a href="https://www.freecodecamp.org/gfuller3">Freecodecamp</li>
+            || <a href="https://www.linkedin.com/in/gabriel-fuller-158a99237/">LinkedIn 
+        </footer>
+    </body>
 </html>
