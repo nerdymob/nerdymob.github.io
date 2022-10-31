@@ -11,7 +11,9 @@
         <script>
         </script>
     </head>
+
     <body>
+        <body style="font-family:papyrus;">
         <body style="background-color:white;">
         <body style="color:black;">
         <body style="margin-top:500px;">
@@ -20,7 +22,6 @@
         <body style="margin-right:800px;">
 
         <h1 style="font-family:times;">
-        <h2 style="font-family:papyrus;">
         <h3 style="font-family:comic_sans;">
         <label style="text-align:center;">
         <h1 style="font-size:10vw">Hello World</h1>
