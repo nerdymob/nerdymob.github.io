@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        Gabriel Fuller's Groovy Frog | ITIS 3135 | Slideshow
+    </title>
+        <link href="styles/default.css" rel="stylesheet" type="text/css" >
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script> 
+    </head>
+    <body>
+        <div data-include="components/header.html"></div>
+
+        <main>
+            <script>
+                $(document).ready(function() {
+                    var imgs = new Array();
+                    var intervalID;
+    
+                    $('#slideshow img').each(function() {
+                        imgs.push($(this).attr('src'));
+                    });
+    
+                    function setImage() 
+                    {
+                        var active = $('#active');
+                        var currentImageURL = active.attr('src');
+                        var activeImage = $.inArray(currentImageURL, imgs);
+                        if(activeImage == (imgs.length - 1)){
+                            activeImage = -1;
+                        }
+    
+                        active.attr('src', imgs[activeImage + 1]);
+                    }
+    
+                    $(function(){
+                        intervalID = setInterval(setImage, 1500);
+                    });
+                });
+            </script>
+
+            <h2>Logo Slideshow</h2>
+            <img id="active" src="images/pexels-ann-antonova-5986729_25_resize.jpg" alt="Octopus 1" style= "width: 600px; height: 400px;">
+            <br>
+            <div id="slideshow">
+                <img class="smaller-image" src="images/pexels-ann-antonova-5986729_25_resize.jpg" alt="Octopus 1" style= "width: 600px; height: 400px;">
+                <img class="smaller-image" src="images/pexels-joachim-schnurle-9718224_25_resize.jpg" alt="Octopus 2" style= "width: 600px; height: 400px;">
+                <img class="smaller-image" src="images/pexels-mael-balland-3099081_25_resize.jpg" alt="Octopus 3" style= "width: 600px; height: 400px;">
+                <img class="smaller-image" src="images/pexels-pia-3046629_25_resize.jpg" alt="Octopus 4" style= "width: 600px; height: 400px;">
+                <img class="smaller-image" src="images/pexels-vladislav-vasnetsov-2902860_25_resize.jpg" alt="Octopus 5" style= "width: 600px; height: 400px;">
+                <img class="smaller-image" src="images/pexels-yu-zhang-9652994_1_25_resize.jpg" alt="Octopus 6" style= "width: 600px; height: 400px;">
+            </div>
+        </main>
+    </body>
+        <footer>
+            <script src="scripts/HTMLInclude.js"></script>
+        </footer>
+</html>
