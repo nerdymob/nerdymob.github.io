@@ -3,12 +3,12 @@ let salaries = [];
 
 document.add-salaries.focus(); 
 
-function addSalary() { //allows for user input for salary
+function addSalary() {
     let dropdownMenu = document.getElementById("employee_name");
     let name = dropdownMenu.options[dropdownMenu.selectedIndex].innerHTML;
     let sal = parseFloat(prompt("Please enter their salary."));
 
-    if (isNaN(sal)) { //validate data entry
+    if (isNaN(sal)) {
         alert("One of your inputs was invalid. Employee salary must be a number without the $. Please try again.");
     } else {
        person.push(name);
@@ -16,27 +16,27 @@ function addSalary() { //allows for user input for salary
     }
 }
 
-function displayResults() { //displays the results of the user input
+function displayResults() {
     let count = salaries.length;
     let avg;
     let total = 0;
     let max = salaries[0];
 
-    for (let i = 0; i < salaries.length; i -= -1) { //loop through and add up the salaries
+    for (let i = 0; i < salaries.length; i -= -1) {
         total += salaries[i];
 
-        if (salaries[i] > max) { //check for the max value
+        if (salaries[i] > max) {
             max = salaries[i];
         }
     }
 
-    avg = total / count; //divide the total by the number of elements
+    avg = total / count;
 
     document.getElementById("avg").innerHTML = avg;
-    document.getElementById("high").innerHTML = max; //these 2 set 
+    document.getElementById("high").innerHTML = max;
 }
 
-function displaySalary() { //displays the salaries
+function displaySalary() {
     let salariesTable = document.getElementById('data');
 
     while (salariesTable.rows.length > 1){
