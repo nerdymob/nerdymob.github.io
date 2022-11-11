@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ={'en'}>
+    <head>
+        <title>
+            Gabriel Fuller's Groovy Frog | ITIS 3135 | Arrays
+        </title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+            <link href = "styles/default.css" rel = "stylesheet"
+    <body>
+        <header>
+            <h1>
+                Gabriel Fuller's Groovy Frog | ITIS 3135
+            </h1>
+            <div data-include="components/header.html"></div>
+        </header>
+        
+        <main>
+            <h2>Activity 8 - Arrays</h2>
+            <form id="dropdown">
+                    <label for="employee_name">Select an Employee:</label>
+                        <select id="employee_name" name="employee_name">
+                            <option value="gabe_fuller">Gabe Fuller</option>
+                            <option value="john_fuller">John Fuller</option>
+                            <option value="christine_fuller">Christine Fuller</option>
+                        </select>
+                    <br>
+            </form>
+            <div class="center">
+                <button id="add-salary" onclick=addSalary()>Add Salary</button>
+                <button id="display-results" onclick=displayResults()>Display Results</button>
+                <button id="display-salary" onclick=displaySalary()>Display Salary</button>
+            </div>
+            <br>
+            <p>Average Salary: <span id="avg">{$$$}</span> - Highest Salary: <span id="high">{$$$}</span></p>
+            <table id="data">
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </tr>
+            </table><br>
+        </main>
+        <footer>
+            <div data-include="components/footer.html"></div>
+        </footer>
+        <script src="scripts/HTMLInclude.js"></script>
+    </body>
+</html>
