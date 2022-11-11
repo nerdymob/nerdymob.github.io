@@ -9,7 +9,7 @@ function addSalary() {
     let sal = parseFloat(prompt("Please enter their salary."));
 
     if (isNaN(sal)) {
-        alert("One of your inputs was invalid. Employee salary must be a number without the $. Please try again.");
+        alert("Please enter a valid number without a $");
     } else {
        person.push(name);
        salaries.push(sal); 
@@ -18,7 +18,7 @@ function addSalary() {
 
 function displayResults() {
     let count = salaries.length;
-    let avg;
+    let average;
     let total = 0;
     let max = salaries[0];
 
@@ -30,9 +30,9 @@ function displayResults() {
         }
     }
 
-    avg = total / count;
+    average = total / count;
 
-    document.getElementById("avg").innerHTML = avg;
+    document.getElementById("average").innerHTML = average;
     document.getElementById("high").innerHTML = max;
 }
 
